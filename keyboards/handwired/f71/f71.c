@@ -6,6 +6,8 @@
 void matrix_init_kb(void) {
   setPinOutput(C13);
   writePinHigh(C13);
+  wait_ms(1000);
+  writePinLow(C13);
 
   matrix_init_user();
 }
