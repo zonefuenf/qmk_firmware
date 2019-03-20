@@ -4,7 +4,7 @@ MCU = STM32F303
 #   comment out to disable the options.
 #
 BACKLIGHT_ENABLE = no
-BOOTMAGIC_ENABLE = no  
+BOOTMAGIC_ENABLE = lite
 MOUSEKEY_ENABLE = no 
 EXTRAKEY_ENABLE = yes 
 CONSOLE_ENABLE = no  
