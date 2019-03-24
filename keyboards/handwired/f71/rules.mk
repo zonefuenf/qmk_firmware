@@ -1,8 +1,6 @@
+LAYOUTS = default
 MCU = STM32F303
 
-# Build Options
-#   comment out to disable the options.
-#
 BACKLIGHT_ENABLE = no
 BOOTMAGIC_ENABLE = lite
 MOUSEKEY_ENABLE = no 

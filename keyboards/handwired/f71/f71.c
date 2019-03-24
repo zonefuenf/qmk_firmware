@@ -4,6 +4,7 @@
 #include "quantum.h"
 
 void matrix_init_kb(void) {
+  // Light up LED for a second after boot up
   setPinOutput(C13);
   writePinHigh(C13);
   wait_ms(1000);
@@ -12,6 +13,17 @@ void matrix_init_kb(void) {
   matrix_init_user();
 }
 
+/* Tap dance setup for l shift and r shift:
+   Hold   = Shift
+   Tap 1x = (
+   Tap 2x = {
+   Tap 3x = [
+   Works for (Windows) ISO-DE keymap; adjust key codes if using a different
+   keymap.
+
+   Functions are pulled from tap dance documentation:
+   https://github.com/qmk/qmk_firmware/blob/master/docs/feature_tap_dance.md
+*/
 int cur_dance(qk_tap_dance_state_t *state) {
   if (state->count == 1) {
     if (state->interrupted || !state->pressed) return SINGLE_TAP;
