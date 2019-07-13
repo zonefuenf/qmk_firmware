@@ -23,3 +23,4 @@
 
 #define WS2812_LED_N 0
 #define RGBLED_NUM WS2812_LED_N
+#define TAPPING_TERM 400  
