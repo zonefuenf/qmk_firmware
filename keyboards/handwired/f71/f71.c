@@ -131,9 +131,6 @@ void lshift_reset(qk_tap_dance_state_t *state, void *user_data) {
 void rshift_finished(qk_tap_dance_state_t *state, void *user_data) {
   rshift_tap_state.state = hold_cur_dance(state);
   switch (rshift_tap_state.state) {
-    case SINGLE_TAP:
-      register_shift_nine();
-      break;
     case SINGLE_HOLD:
       register_code(KC_RSFT);
       break;
@@ -148,9 +145,6 @@ void rshift_finished(qk_tap_dance_state_t *state, void *user_data) {
 
 void rshift_reset(qk_tap_dance_state_t *state, void *user_data) {
   switch (rshift_tap_state.state) {
-    case SINGLE_TAP:
-      unregister_shift_nine();
-      break;
     case SINGLE_HOLD:
       unregister_code(KC_RSFT);
       break;
